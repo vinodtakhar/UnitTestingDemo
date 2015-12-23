@@ -17,4 +17,6 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_login_result">LoginResultActivity</string>
+    <string name="title_activity_depends_on_another">DependsOnAnotherActivity</string>
+    <string name="title_activity_square_calculator">SquareCalculator</string>
 </resources>

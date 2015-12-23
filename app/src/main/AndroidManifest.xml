@@ -58,7 +58,16 @@
         <service
             android:name=".ui.services.MyService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.activity.DependsOnAnotherActivity"
+            android:label="@string/title_activity_depends_on_another"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activity.SquareCalculator"
+            android:label="@string/title_activity_square_calculator"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

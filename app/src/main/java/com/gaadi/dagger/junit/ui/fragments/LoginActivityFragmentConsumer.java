@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.gaadi.dagger.junit.R;
+import com.gaadi.dagger.junit.ui.activity.DependsOnAnotherActivity;
 import com.gaadi.dagger.junit.ui.activity.LoginResultActivity;
 
 /**
@@ -17,7 +18,7 @@ import com.gaadi.dagger.junit.ui.activity.LoginResultActivity;
  */
 public class LoginActivityFragmentConsumer extends Fragment {
 
-    private Button btnLogin;
+    private Button btnLogin,btnSquare;
     private EditText etUsername;
     private EditText etPassword;
 
@@ -27,6 +28,7 @@ public class LoginActivityFragmentConsumer extends Fragment {
         View view= inflater.inflate(R.layout.fragment_login_consumer, container, false);
 
         btnLogin = (Button)view.findViewById(R.id.btnLogin);
+        btnSquare = (Button)view.findViewById(R.id.btnSquareActivity);
 
         etUsername = (EditText)view.findViewById(R.id.etUserame);
         etPassword = (EditText)view.findViewById(R.id.etPassword);
@@ -57,6 +59,14 @@ public class LoginActivityFragmentConsumer extends Fragment {
                     else
                         etPassword.setError("Password is not valid");
                 }
+            }
+        });
+
+
+        btnSquare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), DependsOnAnotherActivity.class));
             }
         });
 

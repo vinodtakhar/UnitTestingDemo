@@ -25,7 +25,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.gaadi.dagger.daggerfragmentexample"
+        applicationId "com.gaadi.dagger.junit"
         minSdkVersion 18
         targetSdkVersion 23
         versionCode 1
@@ -99,4 +99,5 @@ dependencies {
     androidTestCompile "org.mockito:mockito-core:1.+"
     androidTestCompile 'com.google.dexmaker:dexmaker:1.2'
     androidTestCompile 'com.google.dexmaker:dexmaker-mockito:1.2'
+    androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2'
 }
